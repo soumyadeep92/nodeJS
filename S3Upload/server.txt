@@ -1,1 +1,0 @@
-curl -X POST https://vzssmiudng.execute-api.ap-south-1.amazonaws.com/dev/object/event2.jpg
