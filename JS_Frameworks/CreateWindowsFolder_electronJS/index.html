@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/metismenu/dist/metisMenu.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <title>Desktop Application</title>
+</head>
+<body style="background-color: #aec9c7;">
+    <div class="container-fluid">
+        <div class="row" style="height: 70vh;">
+            <div class="col-6" style="border:1px solid black;">
+                <div class="row">
+                    <div class="col-12" style="border: 1px solid rgb(0, 0, 0);height:5vh">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn" style="width: 40vw;">
+                              C:\Users\User\Desktop &#x290B;
+                            </button>
+                            <div id="myDropdown" class="dropdown-content tab">
+                              <a class="tablinks" onclick="openCity(event, 'Root')">Root</a>
+                              <a class="tablinks" onclick="openCity(event, 'Documents')">Documents</a>
+                              <a class="tablinks" onclick="openCity(event, 'drive_d')">D:</a>
+                              <a class="tablinks" onclick="openCity(event, 'drive_e')">E:</a>
+                            </div>
+                          </div>
+                          
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="border: 1px solid rgb(133, 50, 50);height:65vh;padding:0px;font-size:14px;">
+                        <div id="Root" class="tabcontent">
+                          <ul class="metisFolder metismenu ulDir">
+                            <li>
+                                <a href="#"><span class="fa fa-fw fa-folder-o"></span>Root</a>
+                                <ul id="ul">
+                                  <li id="li"></li>
+                                </ul>
+                            </li>
+                          </ul>
+                            
+                          </div>    
+                    </div>
+                    <div class="col-8">
+                      <div class="row">
+                        <div class="col-4" style="text-align: center;">Filename</div>
+                        <div class="col-4" style="text-align: center;">Size</div>
+                        <div class="col-4" style="text-align: center;">Updated</div>
+                      </div>
+                        <div id="word" class="tabcontent">
+                            <p>File1</p>
+                            <p>File2</p>
+                        </div>
+                        <div id="Videos" class="tabcontent">
+                            <p>Video1</p>
+                            <p>Video2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1" style="border: 2px solid rgb(228, 108, 28);height:70vh; z-index:1">
+                >
+            </div>
+            <div class="col-5" style="border:1px solid black;">B</div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12" style="border:1px solid black;height:25vh">
+                D
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="metisMenu.min.js"></script>
+  <script>
+      $('.metisFolder').metisMenu({
+          toggle:false
+      });
+
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+
+        </script>
+    
+</body>
+</html>
