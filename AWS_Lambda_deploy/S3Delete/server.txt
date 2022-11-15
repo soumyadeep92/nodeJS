@@ -1,0 +1,1 @@
+curl -X DELETE https://2dgye4ame4.execute-api.ap-south-1.amazonaws.com/dev/buckdelete/FW38hEsxJj9ezGwm9UW6wcG2Lx9DKvm6

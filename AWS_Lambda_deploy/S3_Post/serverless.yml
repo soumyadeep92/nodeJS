@@ -1,0 +1,27 @@
+service: select-bucket-service
+ 
+frameworkVersion: ">=2.0.0"
+ 
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+  deploymentBucket:
+    name: selectdeploymentbucket
+plugins:
+  - serverless-deployment-bucket
+functions:
+  selector:
+    handler: functions/handler.submit
+    memorySize: 128
+    description: Submit Bucket Select
+    events:
+      - http: 
+          path: /buckme/{versionId}
+          method: get
+          cors: true
+          request:
+            parameters:
+              paths:
+                versionId: true 

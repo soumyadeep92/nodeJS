@@ -1,0 +1,1 @@
+curl -X GET https://0mfi5db838.execute-api.ap-south-1.amazonaws.com/dev/buckme/LrTBOo241ISwWUCDA6v3Rc4dUdXVD835

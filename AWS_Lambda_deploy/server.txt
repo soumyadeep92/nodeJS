@@ -1,0 +1,5 @@
+curl -X GET https://lnat2kyiul.execute-api.ap-south-1.amazonaws.com/dev/buck/basicbucket23414344
+curl -X GET https://0mfi5db838.execute-api.ap-south-1.amazonaws.com/dev/buckme/LrTBOo241ISwWUCDA6v3Rc4dUdXVD835
+curl -X POST https://vzssmiudng.execute-api.ap-south-1.amazonaws.com/dev/object/event2.jpg
+curl -X PUT https://2clk1qt6od.execute-api.ap-south-1.amazonaws.com/dev/object/touch.txt?text=holahola
+curl -X DELETE https://2dgye4ame4.execute-api.ap-south-1.amazonaws.com/dev/buckdelete/FW38hEsxJj9ezGwm9UW6wcG2Lx9DKvm6
