@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "serverless-deployment-bucket": "^1.5.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.49.0",
+    "@aws-sdk/s3-request-presigner": "^3.48.0"
+  }
+}
