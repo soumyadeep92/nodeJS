@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1066.0",
+    "axios": "^0.25.0",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "node-fetch": "^3.2.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "url": "^0.11.0"
+  }
+}
