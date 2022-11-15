@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "serverless-deployment-bucket": "^1.5.1"
+  }
+}

@@ -1,0 +1,1 @@
+POST https://gp856kowk9.execute-api.ap-south-1.amazonaws.com/dev/buck

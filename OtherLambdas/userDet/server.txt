@@ -1,0 +1,2 @@
+REST-API: curl -X POST https://u15gmet2g1.execute-api.ap-south-1.amazonaws.com/prod/test-resource
+Authorized endpoint: curl -X POST -H "authorizationToken:12345" https://u15gmet2g1.execute-api.ap-south-1.amazonaws.com/prod/test-resource

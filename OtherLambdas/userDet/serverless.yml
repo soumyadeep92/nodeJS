@@ -1,0 +1,23 @@
+service: user-service
+
+frameworkVersion: ">=2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+  deploymentBucket:
+    name: userdeployment
+plugins:
+  - serverless-deployment-bucket
+
+functions:
+  usersubmit:
+    handler: api/handler.submit
+    memorySize: 128
+    description: Submit users
+    events:
+      - http: 
+          path: user
+          method: post

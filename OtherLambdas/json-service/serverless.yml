@@ -1,0 +1,23 @@
+service: printer-service
+ 
+frameworkVersion: ">=2.0.0"
+ 
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+  deploymentBucket:
+    name: json-deploymentbucket
+plugins:
+  - serverless-deployment-bucket
+
+functions:
+  jsonPrinter:
+    handler: api/jsonprint.submit
+    memorySize: 128
+    description: Submit Json
+    events:
+      - http: 
+          path: jsons
+          method: post

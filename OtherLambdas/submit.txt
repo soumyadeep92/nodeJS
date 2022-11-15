@@ -1,0 +1,4 @@
+https://jz4a6fqypg.execute-api.ap-south-1.amazonaws.com/dev/jsons
+curl -X PUT https://58qewg4pn5.execute-api.ap-south-1.amazonaws.com/dev/appendText?text=hola
+POST https://gp856kowk9.execute-api.ap-south-1.amazonaws.com/dev/buck
+curl -X POST -H "authorizationToken:12345" https://u15gmet2g1.execute-api.ap-south-1.amazonaws.com/prod/test-resource

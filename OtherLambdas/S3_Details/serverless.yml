@@ -1,0 +1,23 @@
+service: bucket-service
+ 
+frameworkVersion: ">=2.0.0"
+ 
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+  deploymentBucket:
+    name: buckdeploymentbuck
+plugins:
+  - serverless-deployment-bucket
+
+functions:
+  buckeSub:
+    handler: api/handler.submit
+    memorySize: 128
+    description: Submit Buck
+    events:
+      - http: 
+          path: buck
+          method: post
